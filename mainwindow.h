@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QtWidgets>
 
+#include "sql/sqlitedb.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -21,6 +23,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    SQLiteDB dbManager;
 
     QMdiArea *mdiArea;
 };

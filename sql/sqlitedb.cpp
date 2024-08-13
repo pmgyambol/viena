@@ -1,5 +1,18 @@
 #include "sql/sqlitedb.h"
 
+
+SQLiteDB::SQLiteDB(const QString& path)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName(path);
+    const bool success = db.open();
+
+    if (!success)
+    {
+       qDebug() << "Database connection error:" << db.lastError();
+    }
+}
+
 bool SQLiteDB::addUser(const QString& username, const QString& realName, const QString& email)
 {
     QSqlQuery query;

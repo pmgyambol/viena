@@ -12,8 +12,9 @@ QT_END_NAMESPACE
 
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    : QMainWindow(parent),
+    ui(new Ui::MainWindow),
+    dbManager("db/viena.db")
 {
     ui->setupUi(this);
 
