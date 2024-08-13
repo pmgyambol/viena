@@ -1,0 +1,5 @@
+sudo apt install sqlitebrowser
+
+Initiate:
+sqlite3 viena.db < init.sql
+

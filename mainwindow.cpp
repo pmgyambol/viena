@@ -11,7 +11,6 @@ class QMenu;
 QT_END_NAMESPACE
 
 
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -20,7 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     mdiArea = new QMdiArea;
     setCentralWidget(mdiArea);
-
 }
 
 MainWindow::~MainWindow()

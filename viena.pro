@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,13 +10,18 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    newuserdialog.cpp \
+    sql/sqlitedb.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    newuserdialog.h \
+    sql/sqlitedb.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    newuserdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
