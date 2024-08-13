@@ -5,6 +5,7 @@ moc_*
 ui_*
 db/*.db
 Makefile
+readme
 
 # Prerequisites
 *.d
