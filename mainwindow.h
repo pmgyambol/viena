@@ -5,6 +5,8 @@
 #include <QtWidgets>
 
 #include "sql/sqlitedb.h"
+#include "newuserdialog.h"
+#include "userlist.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,10 +23,24 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
+public slots:
+    void newUser();
+    void listUsers();
+    void updateActions();
+
 private:
     Ui::MainWindow *ui;
     SQLiteDB dbManager;
 
+    void createMenus();
+    void createActions();
+
     QMdiArea *mdiArea;
+
+    QMenu    *usersMenu;
+
+    QAction  *newUserAction;
+    QAction  *listUserAction;
 };
 #endif // MAINWINDOW_H

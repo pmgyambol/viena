@@ -12,11 +12,13 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     newuserdialog.cpp \
+    userlist.cpp \
     sql/sqlitedb.cpp
 
 HEADERS += \
     mainwindow.h \
     newuserdialog.h \
+    userlist.h \
     sql/sqlitedb.h
 
 FORMS += \
