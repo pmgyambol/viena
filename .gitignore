@@ -6,6 +6,8 @@ ui_*
 db/*.db
 Makefile
 readme
+listuser*
+mainwindow-org*
 
 # Prerequisites
 *.d

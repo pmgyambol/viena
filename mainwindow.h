@@ -6,7 +6,7 @@
 
 #include "sql/sqlitedb.h"
 #include "newuserdialog.h"
-#include "userlist.h"
+#include "userlist/userlist.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

@@ -12,18 +12,19 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     newuserdialog.cpp \
-    userlist.cpp \
-    sql/sqlitedb.cpp
+    sql/sqlitedb.cpp \
+    userlist/userlist.cpp
 
 HEADERS += \
     mainwindow.h \
     newuserdialog.h \
-    userlist.h \
-    sql/sqlitedb.h
+    sql/sqlitedb.h \
+    userlist/userlist.h
 
 FORMS += \
     mainwindow.ui \
-    newuserdialog.ui
+    newuserdialog.ui \
+    userlist/userlist.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

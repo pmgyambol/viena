@@ -1,8 +1,8 @@
 # viena
 
-## set the database
+## set the database in directory db:
 
-cd db; sqlite3 viena.db < init.sql; cd ..
+sqlite3 viena.db < init.sql
 
 ## compile
 

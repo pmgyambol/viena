@@ -18,12 +18,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    mdiArea = new QMdiArea;
-    setCentralWidget(mdiArea);
-    connect(mdiArea, SIGNAL(subWindowActivated(QMdiSubWindow*)), this, SLOT(updateActions()));
+    setCentralWidget(ui->mdiArea);
+    connect(ui->mdiArea, SIGNAL(subWindowActivated(QMdiSubWindow*)), this, SLOT(updateActions()));
 
     createActions();
-    createMenus();
 }
 
 
@@ -38,29 +36,18 @@ void MainWindow::updateActions()
 }
 
 
-void MainWindow::createMenus()
-{
-    // order here define the order in the final look
-    usersMenu = menuBar()->addMenu(tr("&User"));
-    usersMenu->addAction( newUserAction);
-    usersMenu->addAction(listUserAction);
-}
-
-
 void MainWindow::createActions()
 {
-    newUserAction = new QAction(tr("&New"), this);
-    connect(newUserAction, SIGNAL(triggered()), this, SLOT(newUser()));
-
-    listUserAction = new QAction(tr("&List"), this);
-    connect(listUserAction, SIGNAL(triggered()), this, SLOT(listUsers()));
+    connect(ui->actionNewUser,  SIGNAL(triggered()), this, SLOT(newUser()));
+    connect(ui->actionListUser, SIGNAL(triggered()), this, SLOT(listUsers()));
 }
 
 
 void MainWindow::listUsers()
 {
+    // ListUser *userList = new ListUser;
     UserList *userList = new UserList;
-    QMdiSubWindow *subWindow = mdiArea->addSubWindow(userList);
+    QMdiSubWindow *subWindow = ui->mdiArea->addSubWindow(userList);
     subWindow->show();
 }
 
