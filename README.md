@@ -1,14 +1,14 @@
-# viena
+# Project: viena
 
-## set the database in directory db:
+## Set the database in directory db:
 
 sqlite3 viena.db < init.sql
 
-## compile
+## Compile
 
 qmake && make
 
-## run
+## Run
 
 ./viena
 
