@@ -45,9 +45,8 @@ void MainWindow::createActions()
 
 void MainWindow::listUsers()
 {
-    // ListUser *userList = new ListUser;
-    UserList *userList = new UserList;
-    QMdiSubWindow *subWindow = ui->mdiArea->addSubWindow(userList);
+    ListUser *listUser = new ListUser(nullptr, &dbManager);
+    QMdiSubWindow *subWindow = ui->mdiArea->addSubWindow(listUser);
     subWindow->show();
 }
 

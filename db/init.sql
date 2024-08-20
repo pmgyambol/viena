@@ -9,4 +9,4 @@ INSERT INTO users (username, fullname, email)
 VALUES
 ('darin', 'Darin Darinov', 'baim@d.bg'),
 ('gogoe', 'Ivan Petkanov', 'momo@g.bg'),
-('boiko', 'Boiko Borisov', 'hubo@b.bg')
+('boiko', 'Boiko Morozov', 'hubo@b.bg')

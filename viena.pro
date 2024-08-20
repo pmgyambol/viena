@@ -10,21 +10,25 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
-    newuserdialog.cpp \
+    mainwin/mainwindow.cpp \
+    newuser/newuserdialog.cpp \
     sql/sqlitedb.cpp \
-    userlist/userlist.cpp
+    listuser/listuser.cpp
 
 HEADERS += \
-    mainwindow.h \
-    newuserdialog.h \
+    mainwin/mainwindow.h \
+    newuser/newuserdialog.h \
     sql/sqlitedb.h \
-    userlist/userlist.h
+    listuser/listuser.h
 
 FORMS += \
-    mainwindow.ui \
-    newuserdialog.ui \
-    userlist/userlist.ui
+    mainwin/mainwindow.ui \
+    newuser/newuserdialog.ui \
+    listuser/listuser.ui
+
+OBJECTS_DIR = tmp
+MOC_DIR     = tmp
+UI_DIR      = tmp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

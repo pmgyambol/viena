@@ -5,8 +5,8 @@
 #include <QtWidgets>
 
 #include "sql/sqlitedb.h"
-#include "newuserdialog.h"
-#include "userlist/userlist.h"
+#include "newuser/newuserdialog.h"
+#include "listuser/listuser.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
