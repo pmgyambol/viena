@@ -20,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     setCentralWidget(ui->mdiArea);
     connect(ui->mdiArea, SIGNAL(subWindowActivated(QMdiSubWindow*)), this, SLOT(updateActions()));
-
     createActions();
 }
 
